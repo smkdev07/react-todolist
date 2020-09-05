@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import Header from './components/Header';
+import Todos from './containers/Todos';
+
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledDiv>
+      <Header appName="Todo List" />
+      <Todos />
+    </StyledDiv>
   );
-}
+};
 
 export default App;
