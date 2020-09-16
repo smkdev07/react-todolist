@@ -73,7 +73,7 @@ const AddTodo = (props) => {
   const onSubmitHandler = (event) => {
     event.preventDefault();
     submitHandler(todo.trim());
-    setTodo((prevState) => '');
+    setTodo('');
   };
 
   return (

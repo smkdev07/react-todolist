@@ -70,7 +70,7 @@ const Todos = () => {
     if (deleteStatus) {
       dispatch(removeSelectedTodos());
     }
-    setDeleteStatus((prevState) => !deleteStatus);
+    setDeleteStatus((prevState) => !prevState);
   };
 
   return (
